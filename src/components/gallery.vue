@@ -1,5 +1,5 @@
 <template>
-  <section class="gallery container-fluid d-flex px-0">
+  <section class="gallery container-fluid d-flex">
     <div
       class="gallery__selector gallery__selector--left d-flex flex-column mb-auto mt-5"
     >
@@ -18,7 +18,17 @@
       <a href="" class="text-center">M</a>
       <a href="" class="text-center">N</a>
     </div>
-    <div class="gallery__display container-fluid d-flex flex-wrap gap-4">
+    <div class="gallery__display container gallery__grid">
+      <CardTemplate
+        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        cardTitle="Lorem Ipsum"
+        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
+      ></CardTemplate>
+      <CardTemplate
+        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        cardTitle="Lorem Ipsum"
+        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
+      ></CardTemplate>
       <CardTemplate
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
         cardTitle="Lorem Ipsum"
@@ -85,6 +95,10 @@ export default {
 </script>
 
 <style>
+CardTemplate{
+  margin-bottom: 1rem;
+}
+
 .gallery__selector {
   font-family: "Old Standard TT", serif;
   position: fixed;
@@ -98,14 +112,36 @@ export default {
 }
 .gallery__selector--left {
   border-right: 1.5px solid #1d1d1d;
+  left: 0;
 }
 .gallery__selector--right {
   border-left: 1.5px solid #1d1d1d;
   right: 0;
 }
 .gallery .gallery__display {
-  /* justify-content: space-evenly; */
-  padding-right: 40px;
-  padding-left: 50px;
+  width: auto;
+}
+.gallery .gallery__grid {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-gap: 1rem;
+}
+/* BREAKPOINTS */
+
+@media (min-width: 724px) {
+  .gallery .gallery__grid {
+    grid-template-columns: 300px 300px;
+    margin-left: auto;
+  }
+}
+@media (min-width: 999px) {
+  .gallery .gallery__grid {
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+@media (min-width: 1400px) {
+  .gallery .gallery__grid {
+    grid-template-columns: 300px 300px 300px 300px;
+  }
 }
 </style>

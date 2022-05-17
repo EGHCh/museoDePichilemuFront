@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light fixed-top">
+  <nav class="navbar navbar-light fixed-top pb-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img
@@ -10,12 +10,18 @@
           class="d-inline-block align-text-top"
         />
       </a>
-      <div class="d-flex flex-column align-items-center">
-        <p class="navbar__title">MUSEO <span>de</span> PICHILEMU EN LINEA</p>
-        <p class="navbar__url">www.museopichilemuenlinea.cl</p>
-        <p class="navbar__punchline">Deuncuantohay</p>
+      <div class="d-flex flex-column col-9 col-md-auto align-items-center">
+        <p class="navbar__title text-start text-sm-center">
+          MUSEO <span>de</span> PICHILEMU EN LINEA
+        </p>
+        <p class="navbar__url text-start col-12 text-sm-center">
+          www.museopichilemuenlinea.cl
+        </p>
+        <p class="navbar__punchline text-start col-12 text-sm-center">
+          Deuncuantohay
+        </p>
       </div>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand d-none d-md-flex" href="#">
         <img
           src="/docs/5.0/assets/brand/bootstrap-logo.svg"
           alt=""
@@ -25,7 +31,8 @@
         />
       </a>
     </div>
-    <EditorialSection></EditorialSection>
+    <EditorialSection class="d-none d-sm-flex"></EditorialSection>
+    <hr class="d-sm-none" />
   </nav>
 </template>
 
@@ -47,9 +54,9 @@ export default {
   background-image: url(https://images.unsplash.com/photo-1615800098779-1be32e60cca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2020&q=80);
 }
 .navbar .navbar__title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 34px;
   margin-top: 20px;
 }
 .navbar .navbar__title span {
@@ -57,13 +64,13 @@ export default {
 }
 .navbar .navbar__url {
   font-family: "Roboto Mono", monospace;
-  font-size: 16px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 10px;
 }
 .navbar .navbar__punchline {
-  font-size: 34px;
+  font-size: 24px;
   line-height: 20px;
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
 hr {
   margin: 4px;
@@ -71,5 +78,34 @@ hr {
   background-color: #1d1d1d;
   border: 1px solid;
   opacity: 1;
+}
+@media (max-width: 400px) {
+  .navbar .navbar__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar .navbar__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  .navbar .navbar__title span {
+    font-style: italic;
+  }
+  .navbar .navbar__url {
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+    line-height: 15px;
+  }
+  .navbar .navbar__punchline {
+    font-size: 34px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
 }
 </style>

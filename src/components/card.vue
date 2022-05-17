@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-fill">
+  <div class="">
     <div class="card" style="width: 18rem">
       <img :src="picture_src" class="card-img-top" :alt="cardTitle" />
       <div class="card-body">
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 export default {
   name: "cardTemplate",
   props: {
@@ -28,6 +29,7 @@ export default {
   height: 360px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 .card .card-img-top {
   height: 50%;
