@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="card" style="width: 18rem">
+    <div class="card">
       <img :src="picture_src" class="card-img-top" :alt="cardTitle" />
       <div class="card-body">
         <h5 class="card-title">{{ cardTitle }}</h5>
@@ -26,6 +26,7 @@ export default {
 
 <style>
 .card {
+  max-width: 260px;
   height: 360px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -48,5 +49,11 @@ export default {
 .card .card-text {
   font-size: 14px;
   line-height: 18px;
+}
+
+@media (min-width: 400px){
+  .card {
+    width: 18rem;
+  }
 }
 </style>

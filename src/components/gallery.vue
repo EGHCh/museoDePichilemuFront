@@ -1,7 +1,39 @@
 <template>
   <section class="gallery container-fluid d-flex">
+    <!--Mobile Index-->
     <div
-      class="gallery__selector gallery__selector--left d-flex flex-column mb-auto mt-5"
+      class="gallery__selector gallery__selector--mobile d-flex d-sm-none flex-column"
+    >
+      <a href="" class="text-center">A</a>
+      <a href="" class="text-center">B</a>
+      <a href="" class="text-center">C</a>
+      <a href="" class="text-center">D</a>
+      <a href="" class="text-center">E</a>
+      <a href="" class="text-center">F</a>
+      <a href="" class="text-center">G</a>
+      <a href="" class="text-center">H</a>
+      <a href="" class="text-center">I</a>
+      <a href="" class="text-center">J</a>
+      <a href="" class="text-center">K</a>
+      <a href="" class="text-center">L</a>
+      <a href="" class="text-center">M</a>
+      <a href="" class="text-center">N</a>
+      <a href="" class="text-center">Ñ</a>
+      <a href="" class="text-center">O</a>
+      <a href="" class="text-center">P</a>
+      <a href="" class="text-center">Q</a>
+      <a href="" class="text-center">R</a>
+      <a href="" class="text-center">S</a>
+      <a href="" class="text-center">T</a>
+      <a href="" class="text-center">U</a>
+      <a href="" class="text-center">V</a>
+      <a href="" class="text-center">W</a>
+      <a href="" class="text-center">X</a>
+      <a href="" class="text-center">Y</a>
+      <a href="" class="text-center">Z</a>
+    </div>
+    <div
+      class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-none d-sm-flex flex-column mb-auto mt-5"
     >
       <a href="" class="text-center">A</a>
       <a href="" class="text-center">B</a>
@@ -18,7 +50,7 @@
       <a href="" class="text-center">M</a>
       <a href="" class="text-center">N</a>
     </div>
-    <div class="gallery__display container gallery__grid">
+    <div class="gallery__display container gallery__grid ms-3 ms-sm-auto">
       <CardTemplate
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
         cardTitle="Lorem Ipsum"
@@ -66,7 +98,7 @@
       ></CardTemplate>
     </div>
     <div
-      class="gallery__selector gallery__selector--right d-flex flex-column mb-auto mt-5"
+      class="gallery__selector d-none gallery__selector--desktop gallery__selector--right d-sm-flex flex-column mb-auto mt-5"
     >
       <a href="" class="text-center">Ñ</a>
       <a href="" class="text-center">O</a>
@@ -95,20 +127,31 @@ export default {
 </script>
 
 <style>
-CardTemplate{
+CardTemplate {
   margin-bottom: 1rem;
 }
-
 .gallery__selector {
   font-family: "Old Standard TT", serif;
+}
+.gallery .gallery__selector--mobile {
+  position: sticky;
+  top: 20px;
+}
+.gallery .gallery__selector--desktop {
   position: fixed;
 }
 .gallery__selector a {
   text-decoration: none;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  width: 40px;
   color: #1d1d1d;
+}
+.gallery__selector--desktop a {
   font-size: 24px;
+  width: 40px;
+}
+.gallery__selector--mobile a {
+  font-size: 20;
+  width: 20px;
 }
 .gallery__selector--left {
   border-right: 1.5px solid #1d1d1d;

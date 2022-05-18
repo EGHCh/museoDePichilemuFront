@@ -1,14 +1,14 @@
 <template>
   <section
-    class="editorial-links container-fluid d-flex justify-content-around mx-2 mx-sm-5"
+    class="editorial-links container-fluid d-flex justify-content-around mx-1 mx-sm-5"
   >
-    <a href="" class=" col-sm-5 text-sm-center editorial-links__link">Editorial</a>
+    <a href="" class="col-sm-5 text-sm-center editorial-links__link">Editorial</a>
     <div class="vr d-none d-sm-flex"></div>
     <a
       href=""
       data-bs-target="#myModal"
       data-bs-toggle="modal"
-      class="col-8 col-sm-5 text-sm-center editorial-links__link"
+      class="col-6 col-sm-5 text-center editorial-links__link"
       >Qué entendemos por patrimonio cultural</a
     >
   </section>

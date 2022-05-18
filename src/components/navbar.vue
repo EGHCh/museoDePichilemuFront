@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light fixed-top pb-0">
+  <nav class="navbar navbar-light fixed-sm-top pb-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img
@@ -17,11 +17,11 @@
         <p class="navbar__url text-start col-12 text-sm-center">
           www.museopichilemuenlinea.cl
         </p>
-        <p class="navbar__punchline text-start col-12 text-sm-center">
+        <p class="navbar__punchline text-start me-md-5 me-lg-auto col-12 text-sm-center">
           Deuncuantohay
         </p>
       </div>
-      <a class="navbar-brand d-none d-md-flex" href="#">
+      <a class="navbar-brand d-none d-lg-flex" href="#">
         <img
           src="/docs/5.0/assets/brand/bootstrap-logo.svg"
           alt=""
@@ -31,7 +31,7 @@
         />
       </a>
     </div>
-    <EditorialSection class="d-none d-sm-flex"></EditorialSection>
+    <EditorialSection class=""></EditorialSection>
     <hr class="d-sm-none" />
   </nav>
 </template>
@@ -65,11 +65,11 @@ export default {
 .navbar .navbar__url {
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
-  line-height: 10px;
+  line-height: 14px;
 }
 .navbar .navbar__punchline {
   font-size: 24px;
-  line-height: 20px;
+  line-height: 24px;
   margin-bottom: 5px;
 }
 hr {
@@ -80,11 +80,18 @@ hr {
   opacity: 1;
 }
 @media (max-width: 400px) {
+  .navbar {
+    position: static;
+  }
   .navbar .navbar__title {
     font-size: 30px;
     font-weight: 700;
     line-height: 34px;
     margin-top: 0px;
+    margin-bottom: 0rem;
+  }
+  .navbar .navbar__url {
+    margin-bottom: .5rem;
   }
 }
 @media (min-width: 768px) {
