@@ -82,7 +82,7 @@ hr {
 }
 @media (min-width: 400px) {
   .navbar {
-    position: static;
+    position: fixed;
   }
   .navbar .navbar__title {
     font-size: 30px;
