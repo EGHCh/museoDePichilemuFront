@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light fixed-sm-top pb-0">
+  <nav class="navbar navbar-light pb-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img
@@ -31,7 +31,7 @@
         />
       </a>
     </div>
-    <EditorialSection class=""></EditorialSection>
+    <EditorialSection class="d-none d-sm-flex"/>
     <hr class="d-sm-none" />
   </nav>
 </template>
@@ -58,6 +58,7 @@ export default {
   font-weight: 700;
   line-height: 34px;
   margin-top: 20px;
+  margin-bottom: 0px;
 }
 .navbar .navbar__title span {
   font-style: italic;
@@ -79,7 +80,7 @@ hr {
   border: 1px solid;
   opacity: 1;
 }
-@media (max-width: 400px) {
+@media (min-width: 400px) {
   .navbar {
     position: static;
   }

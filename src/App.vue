@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid main">
-    <NavbarComponent></NavbarComponent>
+    <NavbarComponent class="fixed-top d-none d-sm-flex"/>
+    <NavbarComponent class="d-sm-none p-0 mb-0"/>
     <GallerySection></GallerySection>
     <FooterComponent></FooterComponent>
   </div>
