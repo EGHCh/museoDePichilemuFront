@@ -1,5 +1,9 @@
 <template>
-  <div class="FAB"></div>
+  <div class="FAB d-none">
+    <a href="#nav">
+      <img src="@/assets/icons8-slide-up-36(-hdpi).png" alt="Volver arriba">
+    </a>
+  </div>
 </template>
 
 <script>
@@ -10,10 +14,8 @@ export default {
 
 <style>
 .show-FAB {
-  width: 50px;
-  height: 50px;
-  background-color: aqua;
-  bottom: 20%;
+  bottom: 15%;
+  right: 20px;
   position: fixed;
   z-index: 10;
   animation: showFAB 2s ease;

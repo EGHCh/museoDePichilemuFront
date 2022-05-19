@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-light pb-0">
+  <nav id="navbar" class="navbar navbar-light pb-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img
@@ -54,7 +54,7 @@ export default {
   background-image: url(https://images.unsplash.com/photo-1615800098779-1be32e60cca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2020&q=80);
 }
 .navbar .navbar__title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 34px;
   margin-top: 20px;
@@ -66,10 +66,10 @@ export default {
 .navbar .navbar__url {
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 18px;
 }
 .navbar .navbar__punchline {
-  font-size: 24px;
+  font-size: 30px;
   line-height: 24px;
   margin-bottom: 5px;
 }

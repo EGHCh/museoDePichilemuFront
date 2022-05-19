@@ -4,20 +4,20 @@
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
     >
-      <a href="" class="text-center">A</a>
-      <a href="" class="text-center">B</a>
-      <a href="" class="text-center">C</a>
-      <a href="" class="text-center">D</a>
-      <a href="" class="text-center">E</a>
-      <a href="" class="text-center">F</a>
-      <a href="" class="text-center">G</a>
-      <a href="" class="text-center">H</a>
-      <a href="" class="text-center">I</a>
-      <a href="" class="text-center">J</a>
-      <a href="" class="text-center">K</a>
-      <a href="" class="text-center">L</a>
-      <a href="" class="text-center">M</a>
-      <a href="" class="text-center">N</a>
+      <a href="" class="text-center mb-2 mb-sm-0">A</a>
+      <a href="" class="text-center mb-2 mb-sm-0">B</a>
+      <a href="" class="text-center mb-2 mb-sm-0">C</a>
+      <a href="" class="text-center mb-2 mb-sm-0">D</a>
+      <a href="" class="text-center mb-2 mb-sm-0">E</a>
+      <a href="" class="text-center mb-2 mb-sm-0">F</a>
+      <a href="" class="text-center mb-2 mb-sm-0">G</a>
+      <a href="" class="text-center mb-2 mb-sm-0">H</a>
+      <a href="" class="text-center mb-2 mb-sm-0">I</a>
+      <a href="" class="text-center mb-2 mb-sm-0">J</a>
+      <a href="" class="text-center mb-2 mb-sm-0">K</a>
+      <a href="" class="text-center mb-2 mb-sm-0">L</a>
+      <a href="" class="text-center mb-2 mb-sm-0">M</a>
+      <a href="" class="text-center mb-2 mb-sm-0">N</a>
     </div>
     <div
       @wheel="riseIndex"
@@ -72,19 +72,19 @@
     <div
       class="gallery__selector gallery__selector--desktop gallery__selector--right d-flex flex-column mb-auto mt-auto"
     >
-      <a href="" class="text-center">Ñ</a>
-      <a href="" class="text-center">O</a>
-      <a href="" class="text-center">P</a>
-      <a href="" class="text-center">Q</a>
-      <a href="" class="text-center">R</a>
-      <a href="" class="text-center">S</a>
-      <a href="" class="text-center">T</a>
-      <a href="" class="text-center">U</a>
-      <a href="" class="text-center">V</a>
-      <a href="" class="text-center">W</a>
-      <a href="" class="text-center">X</a>
-      <a href="" class="text-center">Y</a>
-      <a href="" class="text-center">Z</a>
+      <a href="" class="text-center mb-2 mb-sm-0">Ñ</a>
+      <a href="" class="text-center mb-2 mb-sm-0">O</a>
+      <a href="" class="text-center mb-2 mb-sm-0">P</a>
+      <a href="" class="text-center mb-2 mb-sm-0">Q</a>
+      <a href="" class="text-center mb-2 mb-sm-0">R</a>
+      <a href="" class="text-center mb-2 mb-sm-0">S</a>
+      <a href="" class="text-center mb-2 mb-sm-0">T</a>
+      <a href="" class="text-center mb-2 mb-sm-0">U</a>
+      <a href="" class="text-center mb-2 mb-sm-0">V</a>
+      <a href="" class="text-center mb-2 mb-sm-0">W</a>
+      <a href="" class="text-center mb-2 mb-sm-0">X</a>
+      <a href="" class="text-center mb-2 mb-sm-0">Y</a>
+      <a href="" class="text-center mb-2 mb-sm-0">Z</a>
     </div>
   </section>
 </template>
