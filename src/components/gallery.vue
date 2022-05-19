@@ -1,7 +1,5 @@
 <template>
-  <EditorialSection
-    class="sticky-top d-sm-none editorial-for-mobile pt-2"
-  />
+  <EditorialSection class="sticky-top d-sm-none editorial-for-mobile pt-2" />
   <section class="gallery container-fluid d-flex">
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
@@ -21,7 +19,10 @@
       <a href="" class="text-center">M</a>
       <a href="" class="text-center">N</a>
     </div>
-    <div class="gallery__display container gallery__grid ms-3 ms-sm-auto">
+    <div
+      @wheel="riseIndex"
+      class="gallery__display container gallery__grid ms-3 ms-sm-auto"
+    >
       <CardTemplate
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
         cardTitle="Lorem Ipsum"
@@ -95,6 +96,11 @@ import EditorialSection from "./editorialSection.vue";
 export default {
   name: "Gallery-section",
   components: { CardTemplate, EditorialSection },
+  methods: {
+    riseIndex: function () {
+      console.log("holi")
+    }
+  }
 };
 </script>
 
