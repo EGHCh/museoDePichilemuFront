@@ -10,12 +10,17 @@
       </div>
     </div>
   </div>
+  <ModalCard :modalSRC="picture_src" :modalTitle="cardTitle" :modalBody="cardBody"/>
 </template>
 
 <script>
+import ModalCard from "./ModalCard.vue";
 
 export default {
   name: "cardTemplate",
+  components: {
+    ModalCard,
+  },
   props: {
     picture_src: String,
     cardTitle: String,
@@ -51,7 +56,7 @@ export default {
   line-height: 18px;
 }
 
-@media (min-width: 400px){
+@media (min-width: 400px) {
   .card {
     width: 18rem;
   }

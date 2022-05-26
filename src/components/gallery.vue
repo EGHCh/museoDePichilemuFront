@@ -1,5 +1,8 @@
 <template>
   <EditorialSection class="sticky-top d-sm-none editorial-for-mobile pt-2" />
+  <div :v-for="(post, index) in posts">
+    <p>{{ posts }}</p>
+  </div>
   <section class="gallery container-fluid d-flex">
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
@@ -23,51 +26,12 @@
       @wheel="riseIndex"
       class="gallery__display container gallery__grid ms-3 ms-sm-auto"
     >
-      <CardTemplate
+      <!-- <CardTemplate
+        cardTitle="post.title"
+        cardBody="post.body"
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
+      >
+      </CardTemplate> -->
     </div>
     <div
       class="gallery__selector gallery__selector--desktop gallery__selector--right d-flex flex-column mb-auto mt-auto"
@@ -90,17 +54,22 @@
 </template>
 
 <script>
-import CardTemplate from "./card.vue";
+// import CardTemplate from "./card.vue";
 import EditorialSection from "./editorialSection.vue";
 
 export default {
   name: "Gallery-section",
-  components: { CardTemplate, EditorialSection },
-  methods: {
-    riseIndex: function () {
-      console.log("holi")
-    }
-  }
+  components: {
+    // CardTemplate,
+    EditorialSection,
+  },
+  props: {
+    posts: Array,
+  },
+  mounted() {
+    console.log(this.posts);
+  },
+  methods: {},
 };
 </script>
 
