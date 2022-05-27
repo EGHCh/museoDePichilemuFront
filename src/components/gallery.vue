@@ -1,12 +1,11 @@
 <template>
   <EditorialSection class="sticky-top d-sm-none editorial-for-mobile pt-2" />
+  <div>{{posts}}</div>
   <section class="gallery container-fluid d-flex">
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
     >
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0"
-        >A</a
-      >
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">A</a>
       <a @click="getChoice" class="text-center mb-2 mb-sm-0">B</a>
       <a @click="getChoice" class="text-center mb-2 mb-sm-0">C</a>
       <a @click="getChoice" class="text-center mb-2 mb-sm-0">D</a>
@@ -58,13 +57,12 @@
 <script>
 import CardTemplate from "./card.vue";
 import EditorialSection from "./editorialSection.vue";
-
 export default {
   name: "Gallery-section",
-  data(){
+  data() {
     return {
-      choice:'',
-    }
+      choice: "",
+    };
   },
   components: {
     CardTemplate,
@@ -74,16 +72,13 @@ export default {
     posts: Array,
     selectCategory: Function,
   },
-  emits: [
-    'update:choice'
-  ],
+  emits: ["update:choice"],
   setup() {},
-  mounted(){
-  },
+  mounted() {},
   methods: {
     getChoice: function (choice) {
-      this.$emit('update:choice', choice)
-    }
+      this.$emit("update:choice", choice);
+    },
   },
 };
 </script>
@@ -132,7 +127,6 @@ CardTemplate {
   grid-gap: 1rem;
 }
 /* BREAKPOINTS */
-
 @media (min-width: 576px) {
   .gallery__selector a {
     font-size: 24px;
@@ -143,7 +137,6 @@ CardTemplate {
     color: #1d1d1d;
   }
 }
-
 @media (min-width: 724px) {
   .gallery .gallery__grid {
     grid-template-columns: 300px 300px;

@@ -66,8 +66,8 @@ export default {
       window.scrollTo(0, 0);
     },
     choiceUpdate: function (value) {
-      console.log("http://wsgnoticias.byethost7.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML);
-      axios.get("http://wsgnoticias.byethost7.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML).then((resp) => this.data = resp).then(console.log(this.data));
+      console.log("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML);
+      axios.get("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML).then((resp) => this.data = resp.data).then(console.log(this.data)).catch(err => console.log(err));
     },
   },
 };
