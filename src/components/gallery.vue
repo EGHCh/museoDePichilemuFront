@@ -4,87 +4,53 @@
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
     >
-      <a href="" class="text-center mb-2 mb-sm-0">A</a>
-      <a href="" class="text-center mb-2 mb-sm-0">B</a>
-      <a href="" class="text-center mb-2 mb-sm-0">C</a>
-      <a href="" class="text-center mb-2 mb-sm-0">D</a>
-      <a href="" class="text-center mb-2 mb-sm-0">E</a>
-      <a href="" class="text-center mb-2 mb-sm-0">F</a>
-      <a href="" class="text-center mb-2 mb-sm-0">G</a>
-      <a href="" class="text-center mb-2 mb-sm-0">H</a>
-      <a href="" class="text-center mb-2 mb-sm-0">I</a>
-      <a href="" class="text-center mb-2 mb-sm-0">J</a>
-      <a href="" class="text-center mb-2 mb-sm-0">K</a>
-      <a href="" class="text-center mb-2 mb-sm-0">L</a>
-      <a href="" class="text-center mb-2 mb-sm-0">M</a>
-      <a href="" class="text-center mb-2 mb-sm-0">N</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0"
+        >A</a
+      >
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">B</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">C</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">D</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">E</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">F</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">G</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">H</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">I</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">J</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">K</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">L</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">LL</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">M</a>
     </div>
     <div
       @wheel="riseIndex"
       class="gallery__display container gallery__grid ms-3 ms-sm-auto"
     >
+      <h2 v-if="!posts">Seleccione una letra del indice...</h2>
       <CardTemplate
+        v-else
+        :v-for="(post, $index) in posts"
+        cardTitle="{{post.title}}"
+        cardBody="post.body"
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
-      <CardTemplate
-        picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        cardTitle="Lorem Ipsum"
-        cardBody="Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda body Hola Carda "
-      ></CardTemplate>
+      />
     </div>
     <div
       class="gallery__selector gallery__selector--desktop gallery__selector--right d-flex flex-column mb-auto mt-auto"
     >
-      <a href="" class="text-center mb-2 mb-sm-0">Ñ</a>
-      <a href="" class="text-center mb-2 mb-sm-0">O</a>
-      <a href="" class="text-center mb-2 mb-sm-0">P</a>
-      <a href="" class="text-center mb-2 mb-sm-0">Q</a>
-      <a href="" class="text-center mb-2 mb-sm-0">R</a>
-      <a href="" class="text-center mb-2 mb-sm-0">S</a>
-      <a href="" class="text-center mb-2 mb-sm-0">T</a>
-      <a href="" class="text-center mb-2 mb-sm-0">U</a>
-      <a href="" class="text-center mb-2 mb-sm-0">V</a>
-      <a href="" class="text-center mb-2 mb-sm-0">W</a>
-      <a href="" class="text-center mb-2 mb-sm-0">X</a>
-      <a href="" class="text-center mb-2 mb-sm-0">Y</a>
-      <a href="" class="text-center mb-2 mb-sm-0">Z</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">N</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Ñ</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">O</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">P</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Q</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">R</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">S</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">T</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">U</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">V</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">W</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">X</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Y</a>
+      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Z</a>
     </div>
   </section>
 </template>
@@ -95,12 +61,30 @@ import EditorialSection from "./editorialSection.vue";
 
 export default {
   name: "Gallery-section",
-  components: { CardTemplate, EditorialSection },
-  methods: {
-    riseIndex: function () {
-      console.log("holi")
+  data(){
+    return {
+      choice:'',
     }
-  }
+  },
+  components: {
+    CardTemplate,
+    EditorialSection,
+  },
+  props: {
+    posts: Array,
+    selectCategory: Function,
+  },
+  emits: [
+    'update:choice'
+  ],
+  setup() {},
+  mounted(){
+  },
+  methods: {
+    getChoice: function (choice) {
+      this.$emit('update:choice', choice)
+    }
+  },
 };
 </script>
 

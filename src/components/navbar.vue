@@ -1,12 +1,10 @@
 <template>
   <nav id="navbar" class="navbar navbar-light pb-0">
-    <div class="container-fluid">
+    <div class="container-fluid navbar__logo">
       <a class="navbar-brand" href="#">
         <img
-          src="/docs/5.0/assets/brand/bootstrap-logo.svg"
+          src="../assets/logo.gif"
           alt=""
-          width="30"
-          height="24"
           class="d-inline-block align-text-top"
         />
       </a>
@@ -17,21 +15,21 @@
         <p class="navbar__url text-start col-12 text-sm-center">
           www.museopichilemuenlinea.cl
         </p>
-        <p class="navbar__punchline text-start me-md-5 me-lg-auto col-12 text-sm-center">
+        <p
+          class="navbar__punchline text-start me-md-5 me-lg-auto col-12 text-sm-center"
+        >
           Deuncuantohay
         </p>
       </div>
-      <a class="navbar-brand d-none d-lg-flex" href="#">
+      <a class="navbar-brand navbar-brand--right d-none d-lg-flex" href="#">
         <img
-          src="/docs/5.0/assets/brand/bootstrap-logo.svg"
+          src="../assets/logo/01.png"
           alt=""
-          width="30"
-          height="24"
           class="d-inline-block align-text-top"
         />
       </a>
     </div>
-    <EditorialSection class="d-none d-sm-flex"/>
+    <EditorialSection class="d-none d-sm-flex" />
     <hr class="d-sm-none" />
   </nav>
 </template>
@@ -52,6 +50,19 @@ export default {
   font-family: "Old Standard TT", serif;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   background-image: url(https://images.unsplash.com/photo-1615800098779-1be32e60cca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2020&q=80);
+  z-index: 2;
+}
+.navbar .navbar-brand {
+  height: 10px;
+}
+.navbar img {
+  position: absolute;
+  top: 0;
+  max-width: 200px;
+  animation: logoGrow 1s ease;
+}
+.navbar-brand--right img {
+  right: 0px;
 }
 .navbar .navbar__title {
   font-size: 40px;
@@ -92,10 +103,19 @@ hr {
     margin-bottom: 0rem;
   }
   .navbar .navbar__url {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 @media (min-width: 768px) {
+  .navbar img {
+    max-width: 100px;
+    position: absolute;
+    top: 0rem;
+  }
+  .navbar img:hover {
+    max-width: 200px;
+    animation: logoGrow 1s ease;
+  }
   .navbar .navbar__title {
     font-size: 40px;
     font-weight: 700;
@@ -114,6 +134,14 @@ hr {
     font-size: 34px;
     line-height: 20px;
     margin-bottom: 5px;
+  }
+}
+@keyframes logoGrow {
+  from {
+    max-width: 100px;
+  }
+  to {
+    max-width: 200px;
   }
 }
 </style>

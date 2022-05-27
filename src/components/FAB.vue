@@ -1,7 +1,7 @@
 <template>
   <div class="FAB d-none">
     <a href="#nav">
-      <img src="@/assets/icons8-slide-up-36(-hdpi).png" alt="Volver arriba">
+      <img src="@/assets/slide-up.png" alt="Volver arriba" />
     </a>
   </div>
 </template>
