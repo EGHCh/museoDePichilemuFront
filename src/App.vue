@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import NavbarComponent from "./components/navbar.vue";
 import GallerySection from "./components/gallery.vue";
 import FooterComponent from "./components/footerComponent.vue";
@@ -67,7 +67,8 @@ export default {
     },
     choiceUpdate: function (value) {
       console.log("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML);
-      axios.get("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML).then((resp) => this.data = resp.data).then(console.log(this.data)).catch(err => console.log(err));
+      // axios.get("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts").then((resp) => this.data = resp).then(console.log(this.data)).catch(err => console.log(err));
+      fetch("http://backendmuseopichilemu.com/wp-json/wp/v2/posts").then(response => response.json()).then(data => (this.data = data)).then(console.log(this.data))
     },
   },
 };

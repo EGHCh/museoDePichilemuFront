@@ -1,6 +1,6 @@
 <template>
   <EditorialSection class="sticky-top d-sm-none editorial-for-mobile pt-2" />
-  <div>{{posts}}</div>
+  <div @click="consoleHoli"><p >aaaaaaaaaaaa</p></div>
   <section class="gallery container-fluid d-flex">
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
@@ -28,9 +28,10 @@
       <CardTemplate
         v-else
         :v-for="(post, $index) in posts"
-        cardTitle="{{post.title}}"
+        cardTitle="post.id"
         cardBody="post.body"
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+        
       />
     </div>
     <div
@@ -79,6 +80,9 @@ export default {
     getChoice: function (choice) {
       this.$emit("update:choice", choice);
     },
+    consoleHoli: function () {
+      console.log(this.posts[0])
+    }
   },
 };
 </script>

@@ -3,7 +3,7 @@
     <div class="container-fluid navbar__logo">
       <a class="navbar-brand" href="#">
         <img
-          src="../assets/logo.gif"
+          src="../assets/logoMob.gif"
           alt=""
           class="d-inline-block align-text-top"
         />
@@ -108,7 +108,7 @@ hr {
 }
 @media (min-width: 768px) {
   .navbar img {
-    max-width: 100px;
+    max-width: 150px;
     position: absolute;
     top: 0rem;
   }
