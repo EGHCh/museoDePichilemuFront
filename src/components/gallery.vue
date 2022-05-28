@@ -1,11 +1,12 @@
 <template>
   <EditorialSection class="sticky-top d-sm-none editorial-for-mobile pt-2" />
-  <div @click="consoleHoli"><p >aaaaaaaaaaaa</p></div>
+  <!-- <div @click="consoleHoli"><p :v-for="(post, $index) in posts">{{$index}}</p></div> -->
+  <!-- <div>{{ posts }}</div> -->
   <section class="gallery container-fluid d-flex">
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
     >
-      <a @click="getChoice" class="text-center mb-1 mb-sm-0">A</a>
+      <a @click="getChoice" value="2" class="text-center mb-1 mb-sm-0">A</a>
       <a @click="getChoice" class="text-center mb-1 mb-sm-0">B</a>
       <a @click="getChoice" class="text-center mb-1 mb-sm-0">C</a>
       <a @click="getChoice" class="text-center mb-1 mb-sm-0">D</a>
@@ -23,15 +24,12 @@
     <div
       @wheel="riseIndex"
       class="gallery__display container gallery__grid ms-3 ms-sm-auto"
-    >
-      <h2 v-if="!posts">Seleccione una letra del indice...</h2>
-      <CardTemplate
-        v-else
         :v-for="(post, $index) in posts"
+    >
+      <CardTemplate
         cardTitle="post.id"
         cardBody="post.body"
         picture_src="https://images.unsplash.com/photo-1576838202385-c4436b685897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkzMHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        
       />
     </div>
     <div
@@ -81,8 +79,8 @@ export default {
       this.$emit("update:choice", choice);
     },
     consoleHoli: function () {
-      console.log(this.posts[0])
-    }
+      console.log(this.posts[0]);
+    },
   },
 };
 </script>

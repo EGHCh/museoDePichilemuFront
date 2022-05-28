@@ -10,7 +10,6 @@
     />
     <FAB @click="backToTheNavbar" />
     <NavbarComponent class="fixed-top d-none d-sm-flex" />
-    <h1>{{ choice }}</h1>
     <GallerySection
       :posts="data"
       @update:choice="choiceUpdate"
@@ -20,7 +19,7 @@
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 import NavbarComponent from "./components/navbar.vue";
 import GallerySection from "./components/gallery.vue";
 import FooterComponent from "./components/footerComponent.vue";
@@ -48,7 +47,7 @@ export default {
     };
   },
   mounted() {
-    //axios.get(baseURL).then((data) => (this.data = data));
+    axios.get("http://backendmuseopichilemu.com/wp-json/wp/v2/posts").then((data) => (this.data = data.data));
   },
   methods: {
     riseIndex: function () {
@@ -67,8 +66,8 @@ export default {
     },
     choiceUpdate: function (value) {
       console.log("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts?secciones=" + value.target.innerHTML);
-      // axios.get("https://backendmuseopichilemu.000webhostapp.com/wp-json/wp/v2/posts").then((resp) => this.data = resp).then(console.log(this.data)).catch(err => console.log(err));
-      fetch("http://backendmuseopichilemu.com/wp-json/wp/v2/posts").then(response => response.json()).then(data => (this.data = data)).then(console.log(this.data))
+      axios.get("http://backendmuseopichilemu.com/wp-json/wp/v2/posts").then((resp) => this.data = resp.data).then(console.log(value.target)).catch(err => console.log(err));
+      // fetch("http://backendmuseopichilemu.com/wp-json/wp/v2/posts").then(response => response.json()).then(data => (this.data = data.data)).then(console.log(this.data))
     },
   },
 };
