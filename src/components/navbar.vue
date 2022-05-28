@@ -1,7 +1,7 @@
 <template>
   <nav id="navbar" class="navbar navbar-light pb-0">
     <div class="container-fluid navbar__logo">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand navbar-brand--left" href="museopichilemuenlinea.cl">
         <img
           src="../assets/logoMob.gif"
           alt=""
@@ -21,7 +21,7 @@
           Deuncuantohay
         </p>
       </div>
-      <a class="navbar-brand navbar-brand--right d-none d-lg-flex" href="#">
+      <a class="navbar-brand navbar-brand--right d-none d-lg-flex" href="museopichilemuonline.cl">
         <img
           src="../assets/logo/01.png"
           alt=""
@@ -63,6 +63,9 @@ export default {
 }
 .navbar-brand--right img {
   right: 0px;
+}
+.navbar-brand--left img {
+  left: -10px;
 }
 .navbar .navbar__title {
   font-size: 40px;

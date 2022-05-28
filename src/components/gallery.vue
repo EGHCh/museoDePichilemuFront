@@ -5,20 +5,20 @@
     <div
       class="gallery__selector fixed-left gallery__selector--desktop gallery__selector--left d-flex flex-column mx-auto"
     >
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">A</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">B</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">C</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">D</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">E</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">F</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">G</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">H</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">I</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">J</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">K</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">L</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">LL</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">M</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">A</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">B</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">C</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">D</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">E</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">F</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">G</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">H</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">I</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">J</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">K</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">L</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">LL</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">M</a>
     </div>
     <div
       @wheel="riseIndex"
@@ -37,20 +37,20 @@
     <div
       class="gallery__selector gallery__selector--desktop gallery__selector--right d-flex flex-column mb-auto mt-auto"
     >
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">N</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Ñ</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">O</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">P</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Q</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">R</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">S</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">T</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">U</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">V</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">W</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">X</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Y</a>
-      <a @click="getChoice" class="text-center mb-2 mb-sm-0">Z</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">N</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">Ñ</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">O</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">P</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">Q</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">R</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">S</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">T</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">U</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">V</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">W</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">X</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">Y</a>
+      <a @click="getChoice" class="text-center mb-1 mb-sm-0">Z</a>
     </div>
   </section>
 </template>
